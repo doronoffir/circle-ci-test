@@ -12,5 +12,6 @@ ssh -v root@139.59.132.120 << EOF
   sudo apache2ctl graceful
 
   echo 'Done!'
+  echo 'Done!'
   
 EOF
