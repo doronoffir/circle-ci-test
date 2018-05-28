@@ -13,11 +13,5 @@ jobs:
   build:
     machine: true
     steps:
-      - checkout
+#      - checkout
       - run: ./deploy_prod.sh
-
-workflows:
-  version: 2
-  build_and_test:
-    jobs:
-      - build
