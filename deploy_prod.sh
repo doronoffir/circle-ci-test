@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-ssh -v root@139.59.132.120 << EOF
+ssh -v doronoffir@35.205.152.169 << EOF
   
   echo '1. Updating sources'
   cd /repos/circleci-demo/
