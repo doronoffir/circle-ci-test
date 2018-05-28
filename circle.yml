@@ -14,4 +14,5 @@ jobs:
     machine: true
     steps:
 #      - checkout
-      - run: ./deploy_prod.sh
+#      - run: ./deploy_prod.sh
+      - run: echo "hello world!"
