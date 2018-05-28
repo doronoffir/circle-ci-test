@@ -11,10 +11,14 @@
 version: 2
 jobs:
   build:
+    machine:
+      enabled: true
     steps:
       - checkout
       - run: /deploy_prod.sh
   test:
+    machine:
+      enabled: true  
     steps:
       - checkout
       - echo 'no tests, just say us Okay!'
