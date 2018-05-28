@@ -11,4 +11,4 @@ jobs:
        - image: circleci/node:stretch
      steps:
        - checkout
-       - run: sudo ./deploy_prod.sh
+       - run: ping www.google.com
