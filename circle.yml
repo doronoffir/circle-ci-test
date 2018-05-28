@@ -4,15 +4,11 @@
 #    commands:
 #      - ./deploy_prod.sh
 
-#test:
-#  override:
-#    - echo 'no tests, just say us Okay!'
-
 version: 2
 jobs:
-  build:
-    machine: true
-    steps:
-#      - checkout
-#      - run: ./deploy_prod.sh
-      - run: echo "hello world!"
+   build:
+     docker:
+       - image: circleci/node:stretch
+     steps:
+       - checkout
+       - run: echo "hello world"
