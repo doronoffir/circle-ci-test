@@ -9,22 +9,22 @@
 #    - echo 'no tests, just say us Okay!'
 
 version: 2
-jobs:
+deploy:
   build:
     machine:
       enabled: true
     steps:
       - checkout
       - run: /deploy_prod.sh
-  test:
-    machine:
-      enabled: true  
-    steps:
-      - checkout
-      - echo 'no tests, just say us Okay!'
+#  test:
+#    machine:
+#      enabled: true  
+#    steps:
+#      - checkout
+#      - echo 'no tests, just say us Okay!'
+
 workflows:
   version: 2
-  build_and_test:
+  build-and-deploy:
     jobs:
-      - build
-      - test
+      - deploy
