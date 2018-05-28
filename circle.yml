@@ -1,9 +1,26 @@
-deployment:
-  production:
-    branch: master
-    commands:
-      - ./deploy_prod.sh
+#deployment:
+#  production:
+#    branch: master
+#    commands:
+#      - ./deploy_prod.sh
 
-test:
-  override:
-    - echo 'no tests, just say us Okay!'
+#test:
+#  override:
+#    - echo 'no tests, just say us Okay!'
+
+version: 2
+jobs:
+  build:
+    steps:
+      - checkout
+      - run: /deploy_prod.sh
+  test:
+    steps:
+      - checkout
+      - echo 'no tests, just say us Okay!'
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
+      - test
