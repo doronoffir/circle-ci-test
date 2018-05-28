@@ -11,4 +11,4 @@ jobs:
        - image: circleci/node:stretch
      steps:
        - checkout
-       - run: ./deploy_prod.sh
+       - run: ls #./deploy_prod.sh
