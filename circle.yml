@@ -11,4 +11,4 @@ jobs:
        - image: circleci/node:stretch
      steps:
        - checkout
-       - run: ssh -vv -o "StrictHostKeyChecking=no" doronoffir@10.128.0.20
+       - run: ssh -vv -o "StrictHostKeyChecking=no" doronoffir@www.google.com
